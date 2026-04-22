@@ -55,7 +55,7 @@ function validateForm(title,value,createdAt){
   if(isValidLogin(title) == true){
     errors.push('Login должен быть непустой строкой, соответствующей почте');
   }
-  if(!isValidValue(value) == true){
+  if(isValidValue(value) == true){
     errors.push(' Значение должно быть числом от 0 до миллиона');
   }
   if(!isValidDateYMD(createdAt)){
