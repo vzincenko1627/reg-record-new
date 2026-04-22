@@ -52,7 +52,7 @@ function inputlack(){
   errors.push('Пожалуйста убедитесь что пустых полей нету')
 };
 function validateForm(title,value,createdAt){
-  if(!isValidLogin(title) == true){
+  if(isValidLogin(title) == true){
     errors.push('Login должен быть непустой строкой, соответствующей почте');
   }
   if(!isValidValue(value) == true){
