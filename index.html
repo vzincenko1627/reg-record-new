@@ -8,50 +8,37 @@
     <script src="data.js" defer></script>
     <script src="logic.js" defer></script>
     <script src="script.js" defer></script>
+    <!--<script src="practice-lr4.js" defer></script>-->
 </head>
 <body>
     <div class="header">
         <h1>Учёт регистраций сайта</h1>
     </div>
     <div class="container">
-        <div class="list-start">Список</div>
-            <ol>
-                <li>ivan@gmail.com
-                    <details>
-                        <p>Зарегестрирован 20/03/22</p>
-                        <button>Заблокировать</button>
-                    </details>
-                </li>
-                <li>vlad@mail.ru
-                    <details>
-                        <p>Зарегестрирован 26/08/23</p>
-                        <button>Заблокировать</button>
-                    </details>
-                </li>
-                <li>johua@gmail.com
-                    <details>
-                        <p>Зарегестрирован 16/01/20</p>
-                        <button>Заблокировать</button>
-                    </details>
-                </li>
-            </ol>
-            <button id="refreshBtn" class="refresh">Обновить список</button>
-            <div class="list-start">Список записей</div>
-            <p>Отображение данных будет добавлено позже</p>
-            <div>
-                <button id="btnAll">Показать все записи</button>
-                <button id="btnNew">Показать только NEW</button>
-                <button id="btnStats">Показать статистику</button>
-            </div>
-            <pre id="output"></pre>
-            <div id="message"></div>
-            <div id="demoList"></div>
-            <div id="list"></div>
+        <div class="list-start">Список записей</div>
             <button id="btnAll_new">Показать все</button>
             <button id="btnNew_new">Показать NEW</button>
             <button id="btnSort">Сортировать по value ↓</button>
             <button id="btnStats_new">Показать статистику</button>
+            <button id="loadjson">Загрузить данные</button>
+            <pre id="output"></pre>
             <div id="message"></div>
+            <div id="demoList"></div>
+            <div id="list"></div>
+            <div id="message"></div>
+            <div class="list-start">Создание новых записей</div>
+            <form id="loginForm">
+                <input id="titleInput" name="title" placeholder="Логин" />
+                <input id="valueInput" name="value" placeholder="Значение" />
+                <input id="createdAtInput" name="createdAt" placeholder="YYYY-MM-DD" />
+                <select id="statusInput" name="status">
+                    <option value="new">new</option>
+                    <option value="done">done</option>
+                    <option value="registrated">registrated</option>
+                </select>
+                <button type="submit">Сохранить</button>
+            </form>
+            <div id="formErrors"></div>
     </div>
 </body>
 </html>
